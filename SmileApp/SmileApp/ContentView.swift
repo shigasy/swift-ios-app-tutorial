@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        // resizable()などのメソッドはImage構造体のインスタンスなため，メソッドチェーンができる
+        // ラベル名: systemName
         Image(systemName: "smiley")
             // 画面サイズを変更するmodifier
             .resizable()

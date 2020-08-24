@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
     @State var number = 0
     var body: some View {
+        // VStackのあとに()を書かないのはトレイリングクロージャによって()を省略しているから
         VStack {
             Text("\(number)")
             

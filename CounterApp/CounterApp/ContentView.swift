@@ -17,13 +17,19 @@ struct ContentView: View {
     var body: some View {
         // VStackのあとに()を書かないのはトレイリングクロージャによって()を省略しているから
         VStack {
-            Text("\(number)")
+            ZStack {
+                Image("counter")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("\(number)")
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+            }
             
             // 短いクロージャの書き方
             Button(action: {self.number += 1}) {
                 
-            // 本来の無名関数（クロージャ）の書き方
-//            Button(action: {() -> Void in self.number += 1}) {
+                // 本来の無名関数（クロージャ）の書き方
+                //            Button(action: {() -> Void in self.number += 1}) {
                 Text("カウント")
             }
             
@@ -32,9 +38,9 @@ struct ContentView: View {
             Button(action: {self.number += 1}, label: {Text("カウント")})
             
             
-//            func count() {
-//                self.number += 1
-//            }
+            //            func count() {
+            //                self.number += 1
+            //            }
         }
     }
 }

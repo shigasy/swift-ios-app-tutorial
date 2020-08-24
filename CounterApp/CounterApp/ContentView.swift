@@ -20,6 +20,10 @@ struct ContentView: View {
             ZStack {
                 Image("counter")
                     .resizable()
+                    // contentModeはContentMode型がある
+                    // enum型で宣言されており、.filと.fillの2つ以外は受け付けない
+                    // このように決まりきった値のいずれかを必ず指定してほしいような場合、列挙型を使うことが有効。
+                    // 上手に活用すればアプリがクラッシュするという不具合を事前に回避可能
                     .aspectRatio(contentMode: .fit)
                 Text("\(number)")
                     .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)

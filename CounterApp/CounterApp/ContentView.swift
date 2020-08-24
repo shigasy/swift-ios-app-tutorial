@@ -8,6 +8,16 @@
 
 import SwiftUI
 
+// プロパティには「インスタンスプロパティ」と「タイププロパティ」の2種類がある
+// メソッドも同様
+// インスタンスから呼び出すメソッドを「インスタンスメソッド」
+// 構造体から直接呼び出すメソッドを「タイプメソッド」
+// タイププロパティ、タイプメソッドは前にstaticをつける
+
+// TODO: structでもタイププロパティで出来るんだが、enumとの違いを調べる
+
+// タイププロパティとタイプメソッドはclass静的プロパティとclass静的メソッドみたいなもんじゃないかな。構造体版とclass版
+
 struct ContentView: View {
     // @Stateキーワード そのプロパティの値が変更された時に、自動的にiPhoneの画面が更新される。
     // numberプロパティの変更による影響を受けない他のUI部品は再描画されないため、効率が良い。
@@ -26,7 +36,9 @@ struct ContentView: View {
                     // 上手に活用すればアプリがクラッシュするという不具合を事前に回避可能
                     .aspectRatio(contentMode: .fit)
                 Text("\(number)")
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                    // fontの引数はstatic let largeTitle: Fonr
+                    // タイププロパティ
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
             }
             
             // 短いクロージャの書き方
@@ -35,6 +47,7 @@ struct ContentView: View {
                 // 本来の無名関数（クロージャ）の書き方
                 //            Button(action: {() -> Void in self.number += 1}) {
                 Text("カウント")
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).foregroundColor(.white).background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/).cornerRadius(10.0)
             }
             
             // 末尾がクロージャの場合、省略できる（トレイリングクロージャ）。しない場合は

@@ -28,3 +28,13 @@ taiyaki.sayNakami()
 // class使って，参照型でもlet使って instance.propaty = 'a'と出来るだろうけど，どこで変更したか分からなくなりそうなので，セッターか何か使ったほうが良さそうだな〜，わからん．正直初期化以外で上書きしたくない．
 
 
+// enumの入れ子
+// enumから始めても良い。何重になってもドットでアクセスできる
+struct TaiyakiWithEnum {
+    enum nakami {
+        case anko
+        case cream
+        case chocolate
+    }
+}
+print(TaiyakiWithEnum.nakami.anko)

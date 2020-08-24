@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    // @Stateキーワード そのプロパティの値が変更された時に、自動的にiPhoneの画面が更新される。
+    // numberプロパティの変更による影響を受けない他のUI部品は再描画されないため、効率が良い。
+    // @... をプロパティラッパーと呼ぶ
+    // プロパティに特別な機能を追加する文法
     @State var number = 0
     var body: some View {
         // VStackのあとに()を書かないのはトレイリングクロージャによって()を省略しているから

@@ -38,3 +38,20 @@ struct TaiyakiWithEnum {
     }
 }
 print(TaiyakiWithEnum.nakami.anko)
+
+class TaiyakiClass {
+    var nakami = "あんこ"
+    func sayNakami() {
+        print(nakami)
+    }
+}
+
+// structは値型
+// classは参照型であり、アドレスがコピーされる
+let taiyakiClass = TaiyakiClass()
+let taiyakiClass2 = taiyakiClass
+taiyakiClass.nakami = "クリーム"
+taiyakiClass.sayNakami() // => クリーム
+taiyakiClass2.sayNakami() // => クリーム
+
+

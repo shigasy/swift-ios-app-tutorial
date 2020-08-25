@@ -47,12 +47,13 @@ struct ContentView: View {
                 // 本来の無名関数（クロージャ）の書き方
                 //            Button(action: {() -> Void in self.number += 1}) {
                 Text("カウント")
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).foregroundColor(.white).background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/).cornerRadius(10.0)
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/).foregroundColor(.red).background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/).cornerRadius(10.0)
             }
             
             // 末尾がクロージャの場合、省略できる（トレイリングクロージャ）。しない場合は
             // ドキュメントを見ると init(action: () -> Void, label: () -> Label) と書いてある
-            Button(action: {self.number += 1}, label: {Text("カウント")})
+            Button(action: {self.number += 1}, label: {Text("カウント")
+                .background(Color.red)})
             
             
             //            func count() {

@@ -54,4 +54,29 @@ taiyakiClass.nakami = "クリーム"
 taiyakiClass.sayNakami() // => クリーム
 taiyakiClass2.sayNakami() // => クリーム
 
+// プロトコル
+// 他言語でいうインターフェイスの役割
+// プロトコルを型として使う
+// 構造体・列挙体・クラスの3つで使うことがあるが、構造体の使用頻度が圧倒的に多い
+// ドキュメントを読んで、get set と出たら、恐らくプロトコルの宣言がそうなっている
 
+protocol KyotoProtocol {
+    // ストアドプロパティ getのみの読み取り専用も可能
+    var co2: Double { get set }
+    // コンピューテッドプロパティ 計算して返すプロパティなため、getのみ（あとコンピューテッドプロパティはvar）
+    var carbonTax: Double { get }
+    func stopGlobalWarming()
+}
+
+struct Japan: KyotoProtocol {
+    var co2: Double = 42
+    var carbonTax: Double {
+        co2 * 0.1
+    }
+    func stopGlobalWarming() {
+        print("森林増やすよ")
+    }
+}
+var japan = Japan()
+print(japan.co2)
+print(japan.carbonTax)

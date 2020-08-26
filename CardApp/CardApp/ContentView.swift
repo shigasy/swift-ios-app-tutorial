@@ -16,12 +16,25 @@ struct ContentView: View {
     @State var isJapanese = true
     var body: some View {
         ZStack {
+            // Color Literal使えば直感的に選択できる
             Color(red: 0.97, green: 0.96, blue: 0.56).edgesIgnoringSafeArea(.all)
             VStack {
                 ZStack {
+                    // ポイント: プレビューでの単位
+                    // ピクセル: 実機での単位
+                    // width 300ポイント
+                    // Xcodeのプレビュー上ではポイントという単位で表示
+                    // Retinaディスプレイなどで、ピクセルは変わる
+                    // 例えば、2xだったらピクセルはwitdh: 600px
                     Image("card").resizable().frame(width: 300.0, height: 133.0)
-                        .shadow(radius: 3).rotation3DEffect(.degrees(isJapanese ? 0 : 180), axis: (x: 0, y: 1, z: 0))
+                        .shadow(radius: 3)
+                        // isJapaneseがtrueの時、回転角度は0度になる
+                        // 第２引数は回転の軸で、y軸を中心に回転する。そのため、横方向に回転
+                        .rotation3DEffect(.degrees(isJapanese ? 0 : 180), axis: (x: 0, y: 1, z: 0))
                         .animation(.spring())
+                        // UI部品をタップしたときの動作
+                        // トレイリングクロージャで()や引数なし
+                        // 他にもロングタップやドラッグなどのジェスチャーが用意されている
                         .onTapGesture {
                             self.isJapanese.toggle()
                     }
@@ -31,6 +44,7 @@ struct ContentView: View {
                     Text(isJapanese ? japanese : cards[japanese]!).font(.largeTitle)
                 }.padding()
                 HStack {
+                    // UI部品に対する装飾部品の指定を、複数のUI部品に一括で指定できる
                     Group {
                         // bool型は構造体であり、そのメソッドとしてtoggleがある
                         // その他の文字列型や数値型も同様。
@@ -50,7 +64,11 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "forward.fill")
                             Text(/*@START_MENU_TOKEN@*/"次へ"/*@END_MENU_TOKEN@*/)
-                        }}.padding().foregroundColor(.white).background(Color(red: 0.86, green: 0.45, blue: 0.03)).cornerRadius(10)
+                        }}
+                        // paddingの順序が見た目に影響される
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color(red: 0.86, green: 0.45, blue: 0.03)).cornerRadius(10)
                 }
             }
         }

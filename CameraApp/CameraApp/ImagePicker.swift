@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+// UIKitフレームワークのclassだから、SwiftUIフレームワークで使えるUI部品にするための橋渡しするコード
+// 最終的にはAPIリファレンスだが、
+// Apple DeveloperとかApple Developer Forumsとかを見る
 struct ImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let picker = UIImagePickerController()

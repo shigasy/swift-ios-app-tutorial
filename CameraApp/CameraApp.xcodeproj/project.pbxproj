@@ -13,7 +13,7 @@
 		D1055D6324F773DF003FCEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1055D6224F773DF003FCEAF /* Assets.xcassets */; };
 		D1055D6624F773DF003FCEAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1055D6524F773DF003FCEAF /* Preview Assets.xcassets */; };
 		D1055D6924F773DF003FCEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1055D6724F773DF003FCEAF /* LaunchScreen.storyboard */; };
-		D1055D7124F779AC003FCEAF /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1055D7024F779AC003FCEAF /* SwiftUIView.swift */; };
+		D1055D7324F779D4003FCEAF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1055D7224F779D4003FCEAF /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		D1055D6524F773DF003FCEAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1055D6824F773DF003FCEAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1055D6A24F773DF003FCEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1055D7024F779AC003FCEAF /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		D1055D7224F779D4003FCEAF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				D1055D5C24F773DE003FCEAF /* AppDelegate.swift */,
 				D1055D5E24F773DE003FCEAF /* SceneDelegate.swift */,
 				D1055D6024F773DE003FCEAF /* ContentView.swift */,
-				D1055D7024F779AC003FCEAF /* SwiftUIView.swift */,
+				D1055D7224F779D4003FCEAF /* ImagePicker.swift */,
 				D1055D6224F773DF003FCEAF /* Assets.xcassets */,
 				D1055D6724F773DF003FCEAF /* LaunchScreen.storyboard */,
 				D1055D6A24F773DF003FCEAF /* Info.plist */,
@@ -150,8 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1055D5D24F773DE003FCEAF /* AppDelegate.swift in Sources */,
+				D1055D7324F779D4003FCEAF /* ImagePicker.swift in Sources */,
 				D1055D5F24F773DE003FCEAF /* SceneDelegate.swift in Sources */,
-				D1055D7124F779AC003FCEAF /* SwiftUIView.swift in Sources */,
 				D1055D6124F773DE003FCEAF /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,14 +25,31 @@ import SwiftUI
 
 // プロトコルはUIKitフレームワークを使ってカメラ機能を実装する場合はほぼ強制的にこの2つのプロトコルを批准させることになる。Apple社が定めたルール
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // ImagePicker構造体
     var parent:ImagePicker
     
+    // 初期値を代入していないため、イニシャライザを定義
     init(_ parent:ImagePicker) {
         self.parent = parent
     }
     
+    // 撮影した画像を写真ライブラリに保存
+    // このメソッドはiOSが自動的に呼び出すメソッド
+    // 写真撮影後、Use Photoボタンをタップしたタイミングで呼び出される
+    // このメソッドは、UIImagePickerControllerDelegateプロトコル内で宣言されている
+    // 内部引数のinfoには[UIImagePickerController.InfoKey:Any]型の辞書が渡される
+    // Any型の理由は、画像（UIImageクラス）以外にも撮影時刻や場所などの文字列型も含まれている。それぞれに適した型で引数を受け入れようとすると、対応するデータの種類分だけ引数を用意しなければならなくなる。種類が増えた分だけコードが冗長的になる（Anyにしておいて色々情報渡すけど、アプリ開発者側で好きなようにしてくれって感じかな）
+    // しかし、プログラムの正当性を型を使ってチェックしたいため、タイプキャスティング（適した型に変換する）ことが大切。
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // オリジナルの画像を取得
+        // Any型だと、正当性をチェックできないため、UIImage型にタイプキャスティング
+        // タイプキャスティングは継承関係内でしか実行できない
+        // アップキャスティングは基本的に成功するため、特別な書式は用意されておらず、継承海藻の上にある型に入れるだけで完了（let hoge:Any = uiImage）
+        // ダウンキャスティングによる失敗を未然に防ぐための文法が用意されており、それが as! である
+        // 必ずas!キーワードを指定することで、そのタイプキャスティングがダウンキャスティングであることを明示する必要がある
         let uiImage = info[.originalImage] as! UIImage
+        
+        // UIImageWriteToSavedPhotosAlbumの第一引数はImage型の引数にしていすることになるため、UIImageにダウンキャストしないとエラーが出る
         UIImageWriteToSavedPhotosAlbum(uiImage, nil, nil, nil)
     }
     

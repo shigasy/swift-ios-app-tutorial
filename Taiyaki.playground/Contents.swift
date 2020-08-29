@@ -80,3 +80,25 @@ struct Japan: KyotoProtocol {
 var japan = Japan()
 print(japan.co2)
 print(japan.carbonTax)
+
+// --------------
+// delegate
+
+// 弁護士クラス
+class Lawyer {
+    func defend() {
+        print("異議あり！")
+    }
+}
+
+// 被告人クラス
+class Defender {
+    var delegate:Lawyer?
+}
+
+
+let taro = Defender()
+taro.delegate = Lawyer()
+// taroに弁護能力がなくても、代理人を通して弁護することが出来る
+// このdelegateプロパティのことをデリゲートと呼ぶ
+taro.delegate!.defend()

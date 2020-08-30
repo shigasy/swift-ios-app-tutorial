@@ -24,6 +24,7 @@ import SwiftUI
 // そのメソッドを実装しないとアプリが動作しない場合は、必須のメソッドとなっている
 
 // プロトコルはUIKitフレームワークを使ってカメラ機能を実装する場合はほぼ強制的にこの2つのプロトコルを批准させることになる。Apple社が定めたルール
+// 末尾にdelegateという名称がついていて、これらのプロトコルが「デリゲートになるための約束事が書かれたプロトコル」
 class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     // ImagePicker構造体
     var parent:ImagePicker

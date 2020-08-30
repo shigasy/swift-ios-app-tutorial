@@ -84,8 +84,14 @@ print(japan.carbonTax)
 // --------------
 // delegate
 
+// デリゲートは必ずプロトコルを批准する
+protocol LayerLicense {
+    func defend()
+}
+
 // 弁護士クラス
-class Lawyer {
+// delegateのプロパティがLayerLicenseに批准したインスタンスしか受け付けないため、Lawyerクラスをプロトコルに批准させる
+class Lawyer: LayerLicense {
     func defend() {
         print("異議あり！")
     }
@@ -93,7 +99,7 @@ class Lawyer {
 
 // 被告人クラス
 class Defender {
-    var delegate:Lawyer?
+    var delegate:LayerLicense?
 }
 
 

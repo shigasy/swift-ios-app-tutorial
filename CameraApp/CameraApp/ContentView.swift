@@ -42,7 +42,7 @@ struct ContentView: View {
             // モーダルビュー
             // ユーザーに対して何らかの注意を促したい場合や、特定のコンテンツに集中してもらいたい場合に使用する
             if isPicking {
-                ImagePicker()
+                ImagePicker(image: $image, isPicking: $isPicking)
                     // セーフエリア外に表示できるやつ
                     // 時計やバッテリー残量の表示などに鑑賞するため、限られた用途に使われる
                     // カメラの表示など、統一感のある背景をデザインするため

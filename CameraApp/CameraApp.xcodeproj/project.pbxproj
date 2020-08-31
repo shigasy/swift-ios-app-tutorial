@@ -15,6 +15,7 @@
 		D1055D6924F773DF003FCEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1055D6724F773DF003FCEAF /* LaunchScreen.storyboard */; };
 		D1055D7524F77BDC003FCEAF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1055D7424F77BDC003FCEAF /* ImagePicker.swift */; };
 		D1055D7724F77EF7003FCEAF /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1055D7624F77EF7003FCEAF /* Coordinator.swift */; };
+		D1A2E0CF24FCDBF1001FC1B3 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A2E0CE24FCDBF1001FC1B3 /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D1055D6A24F773DF003FCEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1055D7424F77BDC003FCEAF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		D1055D7624F77EF7003FCEAF /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D1A2E0CE24FCDBF1001FC1B3 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D1055D5E24F773DE003FCEAF /* SceneDelegate.swift */,
 				D1055D6024F773DE003FCEAF /* ContentView.swift */,
 				D1055D7624F77EF7003FCEAF /* Coordinator.swift */,
+				D1A2E0CE24FCDBF1001FC1B3 /* UIImageExtensions.swift */,
 				D1055D7424F77BDC003FCEAF /* ImagePicker.swift */,
 				D1055D6224F773DF003FCEAF /* Assets.xcassets */,
 				D1055D6724F773DF003FCEAF /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				D1055D5D24F773DE003FCEAF /* AppDelegate.swift in Sources */,
 				D1055D7524F77BDC003FCEAF /* ImagePicker.swift in Sources */,
 				D1055D7724F77EF7003FCEAF /* Coordinator.swift in Sources */,
+				D1A2E0CF24FCDBF1001FC1B3 /* UIImageExtensions.swift in Sources */,
 				D1055D5F24F773DE003FCEAF /* SceneDelegate.swift in Sources */,
 				D1055D6124F773DE003FCEAF /* ContentView.swift in Sources */,
 			);

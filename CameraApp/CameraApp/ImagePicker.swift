@@ -18,6 +18,8 @@ import SwiftUI
 // ImagePicker構造体は、カメラやアルバムから写真を取得することは出来るが、その写真をどのように利用するかは知らない。その処理は代理人であるCoordinatorクラスに任せる仕様。 -> 写真を取得するするためのコードは便利なクラスを提供してくれているが（UIImagePickerController）、写真をどのように扱うかは開発者ごとに異なるため、delegateという仕組みを使っている。
 struct ImagePicker: UIViewControllerRepresentable {
     
+    // @Bindingは親のStateをにアクセスできる
+    // 通常は値渡しだが、参照渡しになり、子で変更したものは親の状態が変更される
     @Binding var image:Image?
     @Binding var isPicking:Bool
     
@@ -49,8 +51,11 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
 }
 
+// イニシャライザ
 struct ImagePicker_Previews: PreviewProvider {
     static var previews: some View {
+        // Bindingにnilとtrueを渡している
+        // Binding型の定数を作れる
         ImagePicker(image: .constant(nil), isPicking: .constant(true))
     }
 }

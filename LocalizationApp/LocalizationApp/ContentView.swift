@@ -10,12 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Text("Hello")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView().environment(\.locale, Locale(identifier: "en"))
+            ContentView().environment(\.locale, Locale(identifier: "ja"))
+        }
     }
 }

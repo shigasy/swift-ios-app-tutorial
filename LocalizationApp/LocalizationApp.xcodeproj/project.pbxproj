@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D114AD0424FFA2CC00D4C2E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D114AD0624FFA2CC00D4C2E0 /* Localizable.strings */; };
 		D1D8608524FF2A3400A673A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D8608424FF2A3400A673A8 /* AppDelegate.swift */; };
 		D1D8608724FF2A3400A673A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D8608624FF2A3400A673A8 /* SceneDelegate.swift */; };
 		D1D8608924FF2A3400A673A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D8608824FF2A3400A673A8 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		D114AD0124FFA0CB00D4C2E0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D114AD0524FFA2CC00D4C2E0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D1D8608124FF2A3400A673A8 /* LocalizationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalizationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D8608424FF2A3400A673A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D8608624FF2A3400A673A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D1D8608A24FF2A3500A673A8 /* Assets.xcassets */,
 				D1D8608F24FF2A3500A673A8 /* LaunchScreen.storyboard */,
 				D1D8609224FF2A3500A673A8 /* Info.plist */,
+				D114AD0624FFA2CC00D4C2E0 /* Localizable.strings */,
 				D1D8608C24FF2A3500A673A8 /* Preview Content */,
 			);
 			path = LocalizationApp;
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D8609124FF2A3500A673A8 /* LaunchScreen.storyboard in Resources */,
+				D114AD0424FFA2CC00D4C2E0 /* Localizable.strings in Resources */,
 				D1D8608E24FF2A3500A673A8 /* Preview Assets.xcassets in Resources */,
 				D1D8608B24FF2A3500A673A8 /* Assets.xcassets in Resources */,
 			);
@@ -157,6 +161,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D114AD0624FFA2CC00D4C2E0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D114AD0524FFA2CC00D4C2E0 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D1D8608F24FF2A3500A673A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  LocalizationApp
+
+  Created by Keita Shiga on 2020/09/02.
+  Copyright © 2020 Keita Shiga. All rights reserved.
+*/
+"Hello" = "こんにちは";
